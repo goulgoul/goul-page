@@ -658,7 +658,7 @@ function lbR(){const it=LBS.arr[LBS.idx()];$('#lbc').innerHTML=LBS.arr===PF?pfMe
 function lb(w){LBS=w=='rig'?{arr:RIG,idx:()=>ri,go:rigGo,l:'GIF'}:{arr:PF,idx:()=>pi,go:pfGo,l:'IMAGE'};lbR();$('#lb').hidden=false}
 function lbx(){$('#lb').hidden=true}
 function lbGo(d){LBS.go(LBS.idx()+d);lbR()}
-$('#lb').onclick=e=>{const a=e.target.closest('.lbar');if(a){lbGo(+a.dataset.d);return}if(!e.target.closest('img,.lph'))lbx()};
+$('#lb').onclick=e=>{const a=e.target.closest('.lbar');if(a){lbGo(+a.dataset.d);return}if(!e.target.closest('img,video,.lph'))lbx()};
 $('#lb').addEventListener('touchstart',e=>{lx=e.touches[0].clientX},{passive:true});
 $('#lb').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-lx;if(Math.abs(dx)>50)lbGo(dx<0?1:-1)},{passive:true});
 addEventListener('keydown',e=>{if($('#lb').hidden)return;if(e.key=='Escape')lbx();else if(e.key=='ArrowLeft')lbGo(-1);else if(e.key=='ArrowRight')lbGo(1)});
