@@ -537,7 +537,7 @@ section,.hd,.sl,.port,.price,.bk,.inc,.foot{min-width:0;max-width:100%}
 
 <section><div class="hd" data-n="0"><h2><sup>01</sup><bdi data-en="Booking Slots">예약 슬롯 현황</bdi></h2><span>SLOTS</span></div>
 <div class="sl">
-<div class="sl-l"><small>OPEN EVENT · 20% OFF</small><h3 data-en="Availability">현황 안내</h3>
+<div class="sl-l"><small>OPEN EVENT · 50% OFF</small><h3 data-en="Availability">현황 안내</h3>
 <div class="sl-lg"><span><i class="sd"></i><bdi data-en="Available">예약가능</bdi></span><span><i class="sd f"></i><bdi data-en="Booked">예약마감</bdi></span></div>
 <p data-en="Check current availability here.<br>Please look at open dates before inquiring.">현재의 예약 현황을 확인하실 수 있습니다.<br>문의하시기 전에 가능한 일정부터 살펴봐 주세요.</p></div>
 <div class="sl-r"><ul id="slotul"></ul><p class="sl-n" data-en="* Availability may change at any time.">* 예약 현황은 수시로 바뀔 수 있습니다.</p></div>
@@ -560,7 +560,7 @@ section,.hd,.sl,.port,.price,.bk,.inc,.foot{min-width:0;max-width:100%}
 
 <section id="price"><div class="hd" data-n="4"><h2><sup>05</sup><bdi data-en="Price Guide">가격안내</bdi></h2><span>PRICE GUIDE</span></div>
 <div class="price"><div>
-<div class="evb"><b>OPEN EVENT</b><span data-en="Launch event: <em>20% off</em> all plans. Add-on options are excluded from the discount.">오픈 기념으로 요금제 <em>20% 할인</em>을 진행 중입니다. 추가 옵션은 할인 대상에서 제외됩니다.</span></div>
+<div class="evb"><b>OPEN EVENT</b><span data-en="Launch event: <em>50% off</em> all plans. Add-on options are excluded from the discount.">오픈 기념으로 요금제 <em>50% 할인</em>을 진행 중입니다. 추가 옵션은 할인 대상에서 제외됩니다.</span></div>
 <div class="cards" id="cards"></div>
 <div class="opts"><div class="oh"><h4 data-en="Add-on Options">추가 옵션</h4><span>ADD OPTION</span></div><p class="od" id="od"></p><div id="opts"></div></div>
 
@@ -571,13 +571,13 @@ section,.hd,.sl,.port,.price,.bk,.inc,.foot{min-width:0;max-width:100%}
 <small data-en="※ Please state the apparent gender and age range.<br>※ Please <b class='bl'>attach reference images</b> when inquiring.">※ 겉보기 성별·나이대는 반드시 기재해 주세요.<br>※ 문의하실 때 참고 이미지를 <b class="bl">반드시 첨부</b>해 주세요.</small><textarea style="height:160px"></textarea>
 <label data-en="3. Requests · additional questions">3. 요청 · 추가 문의 사항</label>
 <small data-en="e.g. keep private, extra parts you want to add, etc.">예) 비공개 요청, 추가하고 싶은 파츠 등</small><textarea></textarea>
-<p class="notice" style="margin:14px 0 0;text-align:center" data-en="<b class='bl'>20% launch discount in progress!</b> (excl. add-ons)<br>Feel free to contact me :D I'll reply as soon as I check!"><b class="bl">오픈 기념 20% 할인 진행 중!</b> (추가 옵션 제외)<br>편하게 문의해 주세요 :D 확인하는 대로 최대한 빨리 답변드릴게요!</p></div></div>
+<p class="notice" style="margin:14px 0 0;text-align:center" data-en="<b class='bl'>50% launch discount in progress!</b> (excl. add-ons)<br>Feel free to contact me :D I'll reply as soon as I check!"><b class="bl">오픈 기념 50% 할인 진행 중!</b> (추가 옵션 제외)<br>편하게 문의해 주세요 :D 확인하는 대로 최대한 빨리 답변드릴게요!</p></div></div>
 </div>
 
 <aside class="quote"><small>LIVE QUOTE</small><h3 data-en="Estimate">예상 견적</h3>
 <div class="row"><span data-en="Type">작업 유형</span><b id="qt"></b></div>
 <div class="row"><span data-en="Base price">기본 금액</span><b id="qb"></b></div>
-<div class="row"><span data-en="Launch discount (20%)">오픈 기념 할인 (20%)</span><b class="dc" id="qd"></b></div>
+<div class="row"><span data-en="Launch discount (50%)">오픈 기념 할인 (50%)</span><b class="dc" id="qd"></b></div>
 <div class="row"><span data-en="Corporate fee (+30%)">기업세 (+30%)</span><b id="qc">-</b></div>
 <div class="row"><span data-en="Add-ons">추가 옵션</span><b id="qo"></b></div>
 <div class="ol" id="qol"></div>
@@ -763,8 +763,8 @@ $('#lb').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-lx
 addEventListener('keydown',e=>{if($('#lb').hidden)return;if(e.key=='Escape')lbx();else if(e.key=='ArrowLeft')lbGo(-1);else if(e.key=='ArrowRight')lbGo(1)});
 
 /* ===================== 가격 · 견적 ===================== */
-const DC=.2,fmtL=(n,L)=>L==='en'?'₩'+n.toLocaleString('en-US'):n.toLocaleString('en-US')+'원',fmt=n=>fmtL(n,LANG);
-const plans=[{n:'전신 일러스트 + 리깅',p:1450000,t:'일러스트 + 리깅',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작 + 리깅 포함 +VBridger'},{n:'흉상 일러스트 + 리깅',p:1350000,t:'일러스트 + 리깅',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작 + 리깅 포함 +VBridger'},{n:'전신 일러스트',p:850000,t:'전신 일러스트',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작'},{n:'흉상 일러스트',p:750000,t:'흉상 일러스트',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작'}];
+const DC=.5,fmtL=(n,L)=>L==='en'?'₩'+n.toLocaleString('en-US'):n.toLocaleString('en-US')+'원',fmt=n=>fmtL(n,LANG);
+const plans=[{n:'전신 일러스트 + 리깅',p:1500000,t:'일러스트 + 리깅',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작 + 리깅 포함 +VBridger'},{n:'흉상 일러스트 + 리깅',p:1400000,t:'일러스트 + 리깅',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작 + 리깅 포함 +VBridger'},{n:'전신 일러스트',p:900000,t:'전신 일러스트',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작'},{n:'흉상 일러스트',p:800000,t:'흉상 일러스트',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작'}];
 const illustOpts=[
 {n:'추가 디자인 시안 (러프 기준)',d:'',p:60000,max:3},
 {n:'추가 표정 (기본 표정 제외)',d:'',p:20000},
@@ -810,7 +810,7 @@ function render(){
 opts=[...(isRig()?rigOpts:illustOpts),...adminOpts];
 $('#od').style.display=isRig()?'':'none';
 $('#od').innerHTML=isRig()?t('<b>현재 「일러스트 + 리깅」 기준 금액</b>이 표시됩니다.<br>리깅 작업이 포함된 요금제 기준으로 추가 옵션 금액이 적용됩니다. 디자인 난이도에 따라 금액이 달라질 수 있으며, 추가 옵션은 오픈 기념 할인 대상이 아닙니다.'):'';
-$('#cards').innerHTML=plans.map((p,i)=>`<button class="pc${i==cur?' on':''}" data-i="${i}"><b>${t(p.n)}<i class="tag">20% OFF</i></b><strong><s>${fmt(p.p)}</s>${fmt(Math.round(p.p*(1-DC)))}</strong><small>${t(p.s)}</small></button>`).join('');
+$('#cards').innerHTML=plans.map((p,i)=>`<button class="pc${i==cur?' on':''}" data-i="${i}"><b>${t(p.n)}<i class="tag">50% OFF</i></b><strong><s>${fmt(p.p)}</s>${fmt(Math.round(p.p*(1-DC)))}</strong><small>${t(p.s)}</small></button>`).join('');
 $('#opts').innerHTML=opts.map((o,i)=>{const n=sel.get(i)||0,fx=o.p===0||o.tg,pr=!fx&&n>1?fmt(o.p*n):ol(o,LANG);return `<div class="opt${fx?' tg':''}${n?' on':''}" data-i="${i}"><b>${t(o.n)}${o.d?`<em>${t(o.d)}</em>`:''}</b><span>${pr}</span>${fx?'':`<div class="stp"><button type="button" data-a="-1" aria-label="${t('수량 감소')}">−</button><output>${n}</output><button type="button" data-a="1" aria-label="${t('수량 증가')}">+</button></div>`}</div>`}).join('');
 const c=calc();
 $('#qt').textContent=t(c.pl.n);$('#qb').textContent=won(c.b);$('#qd').textContent='-'+won(c.dc);$('#qc').textContent=c.cp?'+'+won(c.cp):'-';$('#qo').textContent=won(c.a);$('#qs').textContent=won(c.tot);
@@ -868,7 +868,7 @@ const FQ=['1. 방송 닉네임 / 플랫폼 / 데뷔 예정 시기','2. 캐릭터
 function upd(){TA.forEach((x,i)=>{const v=x.value.replace(/\s+/g,' ').trim();$('#qf'+i).textContent=v||'-'});}
 TA.forEach(x=>x.addEventListener('input',upd));upd();
 /* 복사되는 신청서는 작가님이 읽기 쉽도록 항상 한국어 양식으로 만들어집니다 */
-$('#copy').onclick=()=>{const c=calc(),txt='[GOUL 신청서]\n'+TA.map((x,i)=>FQ[i]+'\n'+(x.value.trim()||'-')).join('\n\n')+`\n\n[예상 견적]\n작업 유형: ${c.pl.n} (${c.pl.s})\n기본 금액: ${won(c.b)}\n오픈 기념 할인(20%): -${won(c.dc)}\n기업세(+30%): ${c.cp?'+'+won(c.cp):'-'}\n\n[추가 옵션]\n${optLines('ko')}\n추가 옵션 합계: ${won(c.a)}\n\nTOTAL: ${won(c.tot)}`;
+$('#copy').onclick=()=>{const c=calc(),txt='[GOUL 신청서]\n'+TA.map((x,i)=>FQ[i]+'\n'+(x.value.trim()||'-')).join('\n\n')+`\n\n[예상 견적]\n작업 유형: ${c.pl.n} (${c.pl.s})\n기본 금액: ${won(c.b)}\n오픈 기념 할인(50%): -${won(c.dc)}\n기업세(+30%): ${c.cp?'+'+won(c.cp):'-'}\n\n[추가 옵션]\n${optLines('ko')}\n추가 옵션 합계: ${won(c.a)}\n\nTOTAL: ${won(c.tot)}`;
 copyText(txt).then(ok=>{$('#copy').textContent=ok?t('복사됨'):t('복사 실패 · 직접 선택해 주세요');setTimeout(()=>$('#copy').textContent=t('양식 복사'),ok?1200:2400)})};
 function copyText(s){return new Promise(res=>{const fb=()=>{try{const b=$('#copy').getBoundingClientRect(),a=document.createElement('textarea');a.value=s;a.setAttribute('readonly','');a.style.cssText='position:fixed;left:0;width:1px;height:1px;opacity:0;pointer-events:none;top:'+Math.max(0,Math.round(b.top))+'px';document.body.appendChild(a);a.focus({preventScroll:true});a.select();a.setSelectionRange(0,s.length);const ok=document.execCommand('copy');document.body.removeChild(a);$('#copy').focus({preventScroll:true});res(!!ok)}catch(e){res(false)}};if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(s).then(()=>res(true),fb)}else fb()})}
 
