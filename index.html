@@ -531,6 +531,26 @@ section,.hd,.sl,.port,.price,.bk,.inc,.foot{min-width:0;max-width:100%}
 /* 영어 탭 글자가 길어서 PC에서는 폭을 자동으로 */
 @media (min-width:901px){.tabs button,.tabs button.on{width:auto;padding:0 22px}}
 @media (max-width:900px){.tabs button{line-height:1.2}}
+/* 포트폴리오 갤러리 (카테고리 탭 + 썸네일 그리드) */
+.pf{background:var(--card);border-radius:var(--r);padding:28px;outline:1px solid var(--line);outline-offset:-1px}
+.pft{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:20px;-webkit-overflow-scrolling:touch}
+.pft::-webkit-scrollbar{display:none}
+.pft button{flex:none;white-space:nowrap;padding:10px 16px;border-radius:999px;background:var(--soft);font-size:15px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.pft button em{font-style:normal;font-size:12px;color:var(--sub)}
+.pft button.on{background:var(--blue);color:#fff}.pft button.on em{color:#a9c1ff}
+@media (hover:hover){.pft button:not(.on):hover{background:var(--blue-l)}}
+.pfg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pfi{position:relative;aspect-ratio:3/4;width:100%;padding:0;display:block;border-radius:12px;overflow:hidden;background:var(--ph)}
+.pfi img,.pfi video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s var(--ease)}
+@media (hover:hover){.pfi:hover img,.pfi:hover video{transform:scale(1.04)}}
+.pfl{position:absolute;left:8px;bottom:8px;padding:4px 8px;border-radius:6px;background:rgba(13,15,20,.6);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em}
+.pfp{position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;background:rgba(13,15,20,.6);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center}
+.pfm{display:block;margin:22px auto 0;padding:13px 28px;border-radius:999px;background:var(--soft);font-weight:700;font-size:15px}
+.pfm[hidden]{display:none}
+@media (hover:hover){.pfm:hover{background:var(--blue-l)}}
+.pfe{grid-column:1/-1;padding:60px 0;text-align:center;color:#8b92a3;font-weight:700}
+@media (max-width:1100px){.pfg{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.pf{padding:16px}.pfg{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.pfi{border-radius:10px}.pft{margin-bottom:14px}.pft button{padding:9px 14px;font-size:14px}}
 </style>
 </head>
 <body>
@@ -551,7 +571,7 @@ section,.hd,.sl,.port,.price,.bk,.inc,.foot{min-width:0;max-width:100%}
 </div></section>
 
 <section id="port"><div class="hd" data-n="1"><h2><sup>02</sup><bdi data-en="Portfolio">포트폴리오</bdi></h2><span>PORTFOLIO</span></div>
-<div class="port"><div class="pl" id="pl"></div><div class="img" id="pimg"></div></div></section>
+<div class="pf"><div class="pft" id="pft"></div><div class="pfg" id="pfg"></div><button class="pfm" id="pfm" hidden></button></div></section>
 
 <section><div class="hd" data-n="2"><h2><sup>03</sup><bdi data-en="Workflow">작업과정</bdi></h2><span>WORKFLOW</span></div>
 <div class="tabs" id="tabs"><button class="on" data-en="Illustration">일러스트</button><button data-en="Illustration + Rigging">일러스트 + 리깅</button></div>
@@ -638,7 +658,7 @@ const EN={
 '빠른 마감 (별도 협의)':'Rush delivery (negotiable)','별도 협의':'Negotiable',
 /* UI */
 '양식 복사':'Copy form','복사됨':'Copied','복사 실패 · 직접 선택해 주세요':'Copy failed · please select manually',
-'닫기':'Close','이전':'Previous','다음':'Next','수량 감소':'Decrease','수량 증가':'Increase',
+'닫기':'Close','더보기':'Show more','전체':'All','이전':'Previous','다음':'Next','수량 감소':'Decrease','수량 증가':'Increase',
 /* 섹션 07~09 */
 '사용 범위':'Usage Scope','저작권 · 작업물 공개':'Copyright · Work Disclosure','환불 안내':'Refund Policy',
 '방송용 의뢰 기본 포함 사항':'Included with streaming commissions',
@@ -707,25 +727,25 @@ function pfMedia(item,lightbox=false){
     ? `<video src="${item.s}" autoplay muted loop playsinline preload="auto"></video>`
     : `<img src="${item.s}" alt="${t(item.title)}">`;
 }
+const PAGE=12;let pfCat='all',pfN=PAGE,PV=[];
 function pfR(){
-  const pl=$('#pl');
-  if(!PF.length){pl.innerHTML=pfDone?`<div class="ph">${t('등록된 포트폴리오가 없습니다.')}</div>`:'';$('#pimg').innerHTML=pfMedia(null);return}
-  const item=PF[pi],st=pl.scrollTop;
-  pl.innerHTML=PF.map((x,i)=>`<button class="${i==pi?'on':''}" data-i="${i}"><small>${x.label} ${String(x.num).padStart(2,'0')}</small><b>${t(x.title)}</b></button>`).join('');
-  pl.scrollTop=st;
-  const on=pl.querySelector('.on');
-  if(on){const a=on.getBoundingClientRect(),b=pl.getBoundingClientRect();
-    if(a.top<b.top)pl.scrollTop-=b.top-a.top;
-    else if(a.bottom>b.bottom)pl.scrollTop+=a.bottom-b.bottom;}
-  $('#pimg').innerHTML=pfMedia(item)+`<button class="ar l" data-d="-1" aria-label="${t('이전')}">‹</button><button class="ar r" data-d="1" aria-label="${t('다음')}">›</button><div class="dts">${PF.map((_,i)=>`<i class="${i==pi?'on':''}" data-i="${i}"></i>`).join('')}</div>`;
+  const tb=$('#pft'),g=$('#pfg'),m=$('#pfm');
+  if(!PF.length){tb.innerHTML='';m.hidden=true;g.innerHTML=pfDone?`<div class="pfe">${t('등록된 포트폴리오가 없습니다.')}</div>`:'';return}
+  const cats=[['all','전체',PF.length],...PF_GROUPS.map(x=>[x.prefix,x.title,PF.filter(i=>i.prefix===x.prefix).length]).filter(x=>x[2])];
+  if(!cats.some(c=>c[0]===pfCat))pfCat='all';
+  tb.innerHTML=cats.map(([k,n,c])=>`<button class="${k===pfCat?'on':''}" data-k="${k}">${t(n)}<em>${c}</em></button>`).join('');
+  PV=pfCat==='all'?PF:PF.filter(x=>x.prefix===pfCat);
+  g.innerHTML=PV.slice(0,pfN).map((x,i)=>`<button class="pfi" data-i="${i}" aria-label="${t(x.title)} ${x.num}">${x.kind==='video'?`<video src="${x.s}#t=0.1" muted loop playsinline preload="metadata"></video><span class="pfp">▶</span>`:`<img src="${x.s}" alt="" loading="lazy" decoding="async">`}<span class="pfl">${x.label} ${String(x.num).padStart(2,'0')}</span></button>`).join('');
+  const left=PV.length-pfN;m.hidden=left<=0;m.textContent=t('더보기')+' ('+Math.max(left,0)+')';
 }
-function pfGo(n){if(!PF.length)return;pi=(n+PF.length)%PF.length;pfR()}
-$('#pl').onclick=e=>{const b=e.target.closest('button');if(b)pfGo(+b.dataset.i)};
-$('#pimg').onclick=e=>{const a=e.target.closest('.ar'),d=e.target.closest('.dts i');if(a)pfGo(pi+ +a.dataset.d);else if(d)pfGo(+d.dataset.i);else if(e.target.matches('img,video'))lb('pf')};
-let px=0;$('#pimg').addEventListener('touchstart',e=>{px=e.touches[0].clientX},{passive:true});
-$('#pimg').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-px;if(Math.abs(dx)>40)pfGo(pi+(dx<0?1:-1))},{passive:true});
+function pfGo(n){if(!PV.length)return;pi=(n+PV.length)%PV.length}
+$('#pft').onclick=e=>{const b=e.target.closest('button');if(!b)return;pfCat=b.dataset.k;pfN=PAGE;pfR()};
+$('#pfm').onclick=()=>{pfN+=PAGE;pfR()};
+$('#pfg').onclick=e=>{const b=e.target.closest('.pfi');if(b)lb('pf',+b.dataset.i)};
+$('#pfg').addEventListener('mouseover',e=>{const b=e.target.closest('.pfi'),v=b&&b.querySelector('video');if(v)v.play().catch(()=>{})});
+$('#pfg').addEventListener('mouseout',e=>{const b=e.target.closest('.pfi'),v=b&&b.querySelector('video');if(v&&!b.contains(e.relatedTarget))v.pause()});
 async function pfProbe(group,num){
-  const item={label:group.label,title:group.title,num,kind:group.kind,s:`assets/${group.prefix}${String(num).padStart(2,'0')}.${group.ext}`};
+  const item={prefix:group.prefix,label:group.label,title:group.title,num,kind:group.kind,s:`assets/${group.prefix}${String(num).padStart(2,'0')}.${group.ext}`};
   return new Promise(resolve=>{
     const media=group.kind==='video'?document.createElement('video'):new Image();
     let settled=false;
@@ -748,21 +768,15 @@ async function pfProbe(group,num){
   });
 }
 async function pfLoad(){
-  PF.length=0;
-  for(const group of PF_GROUPS){
-    for(let num=1;num<=99;num++){
-      const item=await pfProbe(group,num);
-      if(!item)break;
-      PF.push(item);
-    }
-  }
+  const res=await Promise.all(PF_GROUPS.map(async g=>{const a=[];for(let n=1;n<=300;n++){const it=await pfProbe(g,n);if(!it)break;a.push(it)}return a}));
+  PF.length=0;res.forEach(a=>PF.push(...a));
   pi=0;pfDone=true;pfR();
 }
 
 /* ===================== 전체화면 ===================== */
 let LBS=null,lx=0;
-function lbR(){const it=LBS.arr[LBS.idx()];$('#lbc').innerHTML=LBS.arr===PF?pfMedia(it,true):(it.n?mh(it.n,0,true):(it.s?`<img src="${it.s}" alt="">`:`<div class="lph">${LBS.l}</div>`));$('#lbn').textContent=(LBS.idx()+1)+' / '+LBS.arr.length}
-function lb(w){LBS=w=='rig'?{arr:RIG,idx:()=>ri,go:rigGo,l:'GIF'}:{arr:PF,idx:()=>pi,go:pfGo,l:'IMAGE'};lbR();$('#lb').hidden=false}
+function lbR(){const it=LBS.arr[LBS.idx()];$('#lbc').innerHTML=LBS.pf?pfMedia(it,true):(it.n?mh(it.n,0,true):(it.s?`<img src="${it.s}" alt="">`:`<div class="lph">${LBS.l}</div>`));$('#lbn').textContent=(LBS.idx()+1)+' / '+LBS.arr.length}
+function lb(w,i){LBS=w=='rig'?{arr:RIG,idx:()=>ri,go:rigGo,l:'GIF'}:{arr:PV,idx:()=>pi,go:pfGo,l:'IMAGE',pf:1};if(w!='rig')pi=i||0;lbR();$('#lb').hidden=false}
 function lbx(){$('#lb').hidden=true;$('#lbc').innerHTML=''}
 function lbGo(d){LBS.go(LBS.idx()+d);lbR()}
 $('#lb').onclick=e=>{const a=e.target.closest('.lbar');if(a){lbGo(+a.dataset.d);return}lbx()};
