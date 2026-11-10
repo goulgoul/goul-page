@@ -490,7 +490,7 @@ section,.hd,.sl,.port,.price,.bk,.inc,.foot{min-width:0;max-width:100%}
 /* 이용 범위 표: 2열 고정 폭 · 줄바꿈 허용 */
 .tbl{white-space:normal}
 .tbl tbody{display:table;width:100%;table-layout:fixed}
-.tbl th:first-child{width:62%}
+.tbl th:first-child{width:44%}
 .tbl th,.tbl td{vertical-align:middle;overflow-wrap:anywhere}
 .tbl td.q{color:var(--sub);font-size:15px;font-weight:600}
 @media (max-width:900px){.tbl th,.tbl td{padding:12px 8px}.tbl td:first-child,.tbl th:first-child{padding-left:14px}.tbl th{font-size:14px}}
@@ -568,12 +568,12 @@ section,.hd,.sl,.port,.price,.bk,.inc,.foot{min-width:0;max-width:100%}
 <section id="price"><div class="hd" data-n="4"><h2><sup>05</sup><bdi data-en="Price Guide">가격안내</bdi></h2><span>PRICE GUIDE</span></div>
 <div class="price"><div>
 <div class="evb"><b>OPEN EVENT</b><span data-en="Launch event: <em>50% off</em> all plans. Add-on options are excluded from the discount.">오픈 기념으로 요금제 <em>50% 할인</em>을 진행 중입니다. 추가 옵션은 할인 대상에서 제외됩니다.</span></div>
-<p class="notice" style="margin:0 0 16px" data-en="Prices are for <b class='bl'>non-commercial use</b>. For commercial use (merchandise production &amp; sales, corporate use, etc.), please <b class='bl'>inquire separately</b>.">표시된 금액은 <b class="bl">비상업용</b> 기준입니다. 상업적 이용(굿즈 제작·판매, 기업 사용 등)을 원하시면 <b class="bl">별도로 문의</b>해 주세요.</p>
+<p class="notice" style="margin:0 0 16px" data-en="Prices are for <b class='bl'>non-commercial use</b>. For commercial use (merchandise production &amp; sales, etc.), a <b class='bl'>copyright purchase</b> is available. Please <b class='bl'>inquire separately</b>.">표시된 금액은 <b class="bl">비상업용</b> 기준입니다. 상업적 이용(굿즈 제작·판매 등)을 원하시면 <b class="bl">저작권 구매</b>가 가능하며, <b class="bl">별도로 문의</b>해 주세요.</p>
 <div class="cards" id="cards"></div>
 <div class="opts"><div class="oh"><h4 data-en="Add-on Options">추가 옵션</h4><span>ADD OPTION</span></div><p class="od" id="od"></p><div id="opts"></div></div>
 
 <div id="applyslot"><div class="hd" style="margin-top:80px"><h2><sup>06</sup><bdi data-en="Application Form">신청 양식</bdi></h2><span>APPLY</span></div><div class="bc form">
-<p class="notice" style="margin:0 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)" data-en="※ This form is for <b class='bl'>non-commercial commissions</b> only.<br>For commercial use (merchandise production &amp; sales, corporate use, etc.), please <b class='bl'>inquire separately</b> before applying.">※ 이 신청서는 <b class="bl">비상업용 의뢰</b> 기준입니다.<br>상업적 이용(굿즈 제작·판매, 기업 사용 등)을 원하시면 신청 전에 <b class="bl">별도로 문의</b>해 주세요.</p>
+<p class="notice" style="margin:0 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)" data-en="※ This form is for <b class='bl'>non-commercial commissions</b> only.<br>For commercial use (merchandise production &amp; sales, etc.), a <b class='bl'>copyright purchase</b> is available. Please <b class='bl'>inquire separately</b> before applying.">※ 이 신청서는 <b class="bl">비상업용 의뢰</b> 기준입니다.<br>상업적 이용(굿즈 제작·판매 등)을 원하시면 <b class="bl">저작권 구매</b>가 가능하며, 신청 전에 <b class="bl">별도로 문의</b>해 주세요.</p>
 <label data-en="1. Streamer nickname / Platform / Planned debut date">1. 방송 닉네임 / 플랫폼 / 데뷔 예정 시기</label>
 <small data-en="If this is not for streaming, write 'N/A'">방송용이 아니라서 해당 사항이 없다면 '기재 X'라고 적어 주세요</small><textarea></textarea>
 <label data-en="2. Character traits (body type / personality / mood / RP / streaming style, etc.)">2. 캐릭터 특징 (체형 / 성격 / 분위기 / RP / 방송 스타일 등)</label>
@@ -647,13 +647,13 @@ const EN={
 '방송에 쓰는 표·시트 제작을 위한 2차 가공 가능':'Secondary edits for charts/sheets used in streams are allowed',
 '원본의 특징을 크게 바꾸는 과도한 수정은 불가':'Excessive edits that significantly change the original\'s features are not allowed',
 'AI 학습 및 AI 기반 저작물 생성 용도 사용 불가':'Use for AI training or AI-generated works is prohibited',
-'표에 없는 사용 범위와 상업적 이용은 별도로 문의해 주세요.':'For usage not listed in the table and for commercial use, please inquire separately.',
-'저작권 및 상업적 이용은 별도 문의가 필요합니다.':'Copyright and commercial use require a separate inquiry.',
+'표에 없는 사용 범위는 별도로 문의해 주세요.':'For usage not listed in the table, please inquire separately.',
+'저작권 구매 가격과 세부 조건은 별도 문의가 필요합니다.':'Copyright purchase pricing and detailed terms require a separate inquiry.',
 '이 의뢰는 비상업용 기준이며, 아래 범위 안에서 사용하실 수 있습니다.':'This commission is for non-commercial use and may be used within the scope below.',
-'상업적 이용(굿즈 제작·판매, 기업 사용 등)은 이 요금제에 포함되지 않으며, 원하시는 경우 별도로 문의해 주세요.':'Commercial use (merchandise production & sales, corporate use, etc.) is not included in these plans. Please inquire separately if you need it.',
+'상업적 이용(굿즈 제작·판매 등)은 이 요금제에 포함되지 않으며, 저작권을 구매하시면 가능합니다. 가격과 세부 조건은 별도로 문의해 주세요.':'Commercial use (merchandise production & sales, etc.) is not included in these plans, but is available with a copyright purchase. Please inquire separately for pricing and details.',
 '이용 범위 비교표':'Usage Comparison',
-'항목':'Item','비상업용 의뢰':'Non-commercial commission','별도 문의':'Inquire separately',
-'방송 플랫폼 내 사용':'Use on streaming platforms','유튜브 송출/업로드':'YouTube streaming/upload','굿즈 제작 및 판매':'Merchandise production & sales','타 작가 의뢰 · 3D 제작':'Commissioning other artists · 3D modeling','기업 사용':'Corporate use','모델 양도 · 재판매':'Model transfer · resale',
+'항목':'Item','비상업용 의뢰':'Non-commercial commission','저작권 구매 시':'With copyright purchase','별도 문의':'Inquire separately',
+'방송 플랫폼 내 사용':'Use on streaming platforms','유튜브 송출/업로드':'YouTube streaming/upload','굿즈 제작 및 판매':'Merchandise production & sales','타 작가 의뢰 · 3D 제작':'Commissioning other artists · 3D modeling','모델 양도 · 재판매':'Model transfer · resale',
 '저작권':'Copyright',
 '모든 작업물의 저작권은 작가(구울)에게 있습니다.':'All works are copyrighted by the artist (Goul).',
 '모델을 양도·재판매하거나 AI 학습에 사용하는 것은 불가합니다.':'Transferring or reselling the model, or using it for AI training, is not allowed.',
@@ -696,6 +696,7 @@ $('#tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;[...$('#t
 /* ===================== 포트폴리오 ===================== */
 const PF=[],PF_GROUPS=[
 {prefix:'illust',label:'ILLUST',title:'캐릭터 일러스트',ext:'png',kind:'img'},
+{prefix:'drawing',label:'DRAWING',title:'일러스트',ext:'png',kind:'img'},
 {prefix:'live',label:'LIVE2D',title:'Live2D 리깅',ext:'mp4',kind:'video'},
 {prefix:'design',label:'DESIGN',title:'디자인',ext:'png',kind:'img'}
 ];
@@ -825,8 +826,8 @@ $('#opts').onclick=e=>{const r=e.target.closest('.opt');if(!r)return;const i=+r.
 /* ===================== 사용 범위 · 저작권 · 환불 ===================== */
 const B=(ti,l,c)=>`<div class="bc"><h4>${t(ti)}</h4>${l.map(x=>{const k=x.slice(1),h=x[0];return h=='#'?`<p class="n">${t(k)}</p>`:h=='!'?`<p class="s">${t(k)}</p>`:h=='-'?`<p class="i${c?' '+c:''}">${t(k).replace(/(\d+%)/g,'<b>$1</b>')}</p>`:`<p>${t(x)}</p>`}).join('')}</div>`;
 function SEC(){return [
-['07','사용 범위','USAGE',[`<div class="bc"><h4>${t('방송용 의뢰 기본 포함 사항')}</h4><p class="n">${t('이 의뢰는 비상업용 기준이며, 아래 범위 안에서 사용하실 수 있습니다.')}</p><p class="i">${t('치지직·SOOP 등 방송 플랫폼 내 방송 송출 가능')}</p><p class="i">${t('방송용 일러스트(프로필 이미지 등)와 팬아트 제작 가능')}</p><p class="i">${t('방송에 쓰는 표·시트 제작을 위한 2차 가공 가능')}</p><p class="i x">${t('원본의 특징을 크게 바꾸는 과도한 수정은 불가')}</p><p class="i x">${t('AI 학습 및 AI 기반 저작물 생성 용도 사용 불가')}</p><p class="n">${t('표에 없는 사용 범위와 상업적 이용은 별도로 문의해 주세요.')}</p></div><div class="bc"><h4>${t('이용 범위 비교표')}</h4><table class="tbl"><tr><th>${t('항목')}</th><th>${t('비상업용 의뢰')}</th></tr>${[['방송 플랫폼 내 사용',1],['유튜브 송출/업로드',1],['굿즈 제작 및 판매',0],['타 작가 의뢰 · 3D 제작',0],['기업 사용',0],['모델 양도 · 재판매',0]].map(r=>`<tr><td>${t(r[0])}</td>${r.slice(1).map(v=>v===1?'<td class="y">○</td>':v===0?'<td class="no">✕</td>':`<td class="q">${t(v)}</td>`).join('')}</tr>`).join('')}</table><p class="n" style="margin:12px 0 0">${t('저작권 및 상업적 이용은 별도 문의가 필요합니다.')}</p></div>`]],
-['08','저작권 · 작업물 공개','COPYRIGHT',[B('저작권',['모든 작업물의 저작권은 작가(구울)에게 있습니다.','-모델을 양도·재판매하거나 AI 학습에 사용하는 것은 불가합니다.','-상업적 이용(굿즈 제작·판매, 기업 사용 등)은 이 요금제에 포함되지 않으며, 원하시는 경우 별도로 문의해 주세요.','#이 밖의 저작권 관련 내용은 별도로 문의해 주세요.']),
+['07','사용 범위','USAGE',[`<div class="bc"><h4>${t('방송용 의뢰 기본 포함 사항')}</h4><p class="n">${t('이 의뢰는 비상업용 기준이며, 아래 범위 안에서 사용하실 수 있습니다.')}</p><p class="i">${t('치지직·SOOP 등 방송 플랫폼 내 방송 송출 가능')}</p><p class="i">${t('방송용 일러스트(프로필 이미지 등)와 팬아트 제작 가능')}</p><p class="i">${t('방송에 쓰는 표·시트 제작을 위한 2차 가공 가능')}</p><p class="i x">${t('원본의 특징을 크게 바꾸는 과도한 수정은 불가')}</p><p class="i x">${t('AI 학습 및 AI 기반 저작물 생성 용도 사용 불가')}</p><p class="n">${t('표에 없는 사용 범위는 별도로 문의해 주세요.')}</p></div><div class="bc"><h4>${t('이용 범위 비교표')}</h4><table class="tbl"><tr><th>${t('항목')}</th><th>${t('비상업용 의뢰')}</th><th>${t('저작권 구매 시')}</th></tr>${[['방송 플랫폼 내 사용',1,1],['유튜브 송출/업로드',1,1],['굿즈 제작 및 판매',0,1],['타 작가 의뢰 · 3D 제작',0,1],['모델 양도 · 재판매',0,'별도 문의']].map(r=>`<tr><td>${t(r[0])}</td>${r.slice(1).map(v=>v===1?'<td class="y">○</td>':v===0?'<td class="no">✕</td>':`<td class="q">${t(v)}</td>`).join('')}</tr>`).join('')}</table><p class="n" style="margin:12px 0 0">${t('저작권 구매 가격과 세부 조건은 별도 문의가 필요합니다.')}</p></div>`]],
+['08','저작권 · 작업물 공개','COPYRIGHT',[B('저작권',['모든 작업물의 저작권은 작가(구울)에게 있습니다.','-모델을 양도·재판매하거나 AI 학습에 사용하는 것은 불가합니다.','-상업적 이용(굿즈 제작·판매 등)은 이 요금제에 포함되지 않으며, 저작권을 구매하시면 가능합니다. 가격과 세부 조건은 별도로 문의해 주세요.','#이 밖의 저작권 관련 내용은 별도로 문의해 주세요.']),
 B('포트폴리오 공개',['완성작뿐 아니라 작업 중인 결과물 역시 SNS·유튜브 등에 포트폴리오로 공개될 수 있습니다.','-데뷔 전 비공개 요청은 별도 비용 없이 가능합니다. 원하시면 미리 꼭 알려 주세요.','-데뷔 이후에도 비공개를 원하시는 경우 추가금 100,000원(데뷔 후 6개월 기준)이 발생하며, 추가 옵션에서 선택하실 수 있습니다.','#비공개 요청은 작업 시작 전에 전달해 주셔야 하고, 착수 이후에는 반영이 어려울 수 있습니다.'])]],
 ['09','환불 안내','REFUND',[B('일러스트',['-입금(예약) 후 ~ 스케치 착수 전: 90% 환불','-스케치 착수 ~ 채색 착수 전: 75% 환불','-채색 작업이 시작된 후에는 환불이 불가합니다.']),
 B('일러스트 + 리깅',['-입금(예약) 후 ~ 스케치 착수 전: 90% 환불','-스케치 착수 ~ 채색 착수 전: 75% 환불','-채색 착수 ~ 리깅 착수 전: 일러스트 금액은 환불 불가, 리깅 금액은 90% 환불','-리깅 착수 ~ 얼굴 작업 완료 전(눈 깜빡임, 입 모양 등): 리깅 금액의 50% 환불','-얼굴 작업이 완료된 후에는 환불이 불가합니다.','#환불 금액은 실제 결제 금액을 기준으로 하며, 리깅 금액은 일러스트 + 리깅 금액에서 같은 범위의 일러스트 단독 금액을 뺀 금액입니다.'])]]]}
@@ -872,7 +873,7 @@ const FQ=['1. 방송 닉네임 / 플랫폼 / 데뷔 예정 시기','2. 캐릭터
 function upd(){TA.forEach((x,i)=>{const v=x.value.replace(/\s+/g,' ').trim();$('#qf'+i).textContent=v||'-'});}
 TA.forEach(x=>x.addEventListener('input',upd));upd();
 /* 복사되는 신청서는 작가님이 읽기 쉽도록 항상 한국어 양식으로 만들어집니다 */
-$('#copy').onclick=()=>{const c=calc(),txt='[GOUL 신청서]\n(비상업용 의뢰 기준 · 상업적 이용은 별도 문의)\n\n'+TA.map((x,i)=>FQ[i]+'\n'+(x.value.trim()||'-')).join('\n\n')+`\n\n[예상 견적]\n작업 유형: ${c.pl.n} (${c.pl.s})\n기본 금액: ${won(c.b)}\n오픈 기념 할인(50%): -${won(c.dc)}\n\n[추가 옵션]\n${optLines('ko')}\n추가 옵션 합계: ${won(c.a)}\n\nTOTAL: ${won(c.tot)}`;
+$('#copy').onclick=()=>{const c=calc(),txt='[GOUL 신청서]\n(비상업용 의뢰 기준 · 상업적 이용은 저작권 구매 후 별도 문의)\n\n'+TA.map((x,i)=>FQ[i]+'\n'+(x.value.trim()||'-')).join('\n\n')+`\n\n[예상 견적]\n작업 유형: ${c.pl.n} (${c.pl.s})\n기본 금액: ${won(c.b)}\n오픈 기념 할인(50%): -${won(c.dc)}\n\n[추가 옵션]\n${optLines('ko')}\n추가 옵션 합계: ${won(c.a)}\n\nTOTAL: ${won(c.tot)}`;
 copyText(txt).then(ok=>{$('#copy').textContent=ok?t('복사됨'):t('복사 실패 · 직접 선택해 주세요');setTimeout(()=>$('#copy').textContent=t('양식 복사'),ok?1200:2400)})};
 function copyText(s){return new Promise(res=>{const fb=()=>{try{const b=$('#copy').getBoundingClientRect(),a=document.createElement('textarea');a.value=s;a.setAttribute('readonly','');a.style.cssText='position:fixed;left:0;width:1px;height:1px;opacity:0;pointer-events:none;top:'+Math.max(0,Math.round(b.top))+'px';document.body.appendChild(a);a.focus({preventScroll:true});a.select();a.setSelectionRange(0,s.length);const ok=document.execCommand('copy');document.body.removeChild(a);$('#copy').focus({preventScroll:true});res(!!ok)}catch(e){res(false)}};if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(s).then(()=>res(true),fb)}else fb()})}
 
