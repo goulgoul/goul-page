@@ -424,7 +424,7 @@ function pfR(){
   if(!PF.length){g.innerHTML=pfDone?`<div class="pfe">${t('등록된 포트폴리오가 없습니다.')}</div>`:'';return}
   g.innerHTML=PF_GROUPS.map(x=>{
     const L=PF.filter(i=>i.prefix===x.prefix);if(!L.length)return'';
-    return `<div class="pfr"><div class="pfrh"><small>${x.label}</small><b>${t(x.title)}</b><em>${L.length}</em><div class="pfa"><button data-d="-1" aria-label="${t('이전')}">‹</button><button data-d="1" aria-label="${t('다음')}">›</button></div></div><div class="pfs" data-c="${x.prefix}">${L.map((it,i)=>`<button class="pfi" data-c="${x.prefix}" data-i="${i}" style="aspect-ratio:${it.w||3}/${it.h||4}" aria-label="${t(x.title)} ${it.num}">${it.kind==='video'?`<video src="${it.s}#t=0.1" muted loop playsinline preload="metadata"></video><span class="pfp">▶</span>`:`<img src="${it.s}" alt="" loading="lazy" decoding="async" draggable="false">`}</button>`).join('')}</div></div>`}).join('');
+    return `<div class="pfr"><div class="pfrh"><small>${x.label}</small><b>${t(x.title)}</b><em>${L.length}</em><div class="pfa"><button data-d="-1" aria-label="${t('이전')}">‹</button><button data-d="1" aria-label="${t('다음')}">›</button></div></div><div class="pfs" data-c="${x.prefix}">${L.map((it,i)=>`<button class="pfi" data-c="${x.prefix}" data-i="${i}" style="aspect-ratio:${it.w||3}/${it.h||4}" aria-label="${t(x.title)} ${it.num}">${it.kind==='video'?`<video src="${it.s}#t=0.1" autoplay muted loop playsinline preload="auto"></video>`:`<img src="${it.s}" alt="" loading="lazy" decoding="async" draggable="false">`}</button>`).join('')}</div></div>`}).join('');
   g.querySelectorAll('.pfs').forEach(e=>{if(sv[e.dataset.c])e.scrollLeft=sv[e.dataset.c]});
 }
 function pfGo(n){if(!PV.length)return;pi=(n+PV.length)%PV.length}
