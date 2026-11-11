@@ -531,25 +531,25 @@ section,.hd,.sl,.port,.price,.bk,.inc,.foot{min-width:0;max-width:100%}
 /* 영어 탭 글자가 길어서 PC에서는 폭을 자동으로 */
 @media (min-width:901px){.tabs button,.tabs button.on{width:auto;padding:0 22px}}
 @media (max-width:900px){.tabs button{line-height:1.2}}
-/* 포트폴리오 갤러리 (카테고리 탭 + 썸네일 그리드) */
-.pf{background:var(--card);border-radius:var(--r);padding:28px;outline:1px solid var(--line);outline-offset:-1px}
-.pft{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:20px;-webkit-overflow-scrolling:touch}
-.pft::-webkit-scrollbar{display:none}
-.pft button{flex:none;white-space:nowrap;padding:10px 16px;border-radius:999px;background:var(--soft);font-size:15px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
-.pft button em{font-style:normal;font-size:12px;color:var(--sub)}
-.pft button.on{background:var(--blue);color:#fff}.pft button.on em{color:#a9c1ff}
-@media (hover:hover){.pft button:not(.on):hover{background:var(--blue-l)}}
-.pfg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.pfi{position:relative;aspect-ratio:1/1;width:100%;padding:0;display:block;border-radius:12px;overflow:hidden;background:var(--ph)}
-.pfi img,.pfi video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s var(--ease)}
-@media (hover:hover){.pfi:hover img,.pfi:hover video{transform:scale(1.04)}}
-.pfl{position:absolute;left:8px;bottom:8px;padding:4px 8px;border-radius:6px;background:rgba(13,15,20,.6);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em}
-.pfp{position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:50%;background:rgba(13,15,20,.6);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center}
-.pfm{display:block;margin:22px auto 0;padding:13px 28px;border-radius:999px;background:var(--soft);font-weight:700;font-size:15px}
-.pfm[hidden]{display:none}
-@media (hover:hover){.pfm:hover{background:var(--blue-l)}}
-.pfe{grid-column:1/-1;padding:60px 0;text-align:center;color:#8b92a3;font-weight:700}
-@media (max-width:640px){.pf{padding:16px}.pfg{gap:8px}.pfi{aspect-ratio:3/4;border-radius:10px}.pft{margin-bottom:14px}.pft button{padding:9px 14px;font-size:14px}}
+/* 포트폴리오: 카테고리별 가로 스크롤 (세로 고정 · 가로는 원본 비율) */
+.pf{--pfh:480px;display:flex;flex-direction:column;gap:48px}
+.pfrh{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.pfrh small{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--blue);padding:5px 10px;border-radius:999px;background:var(--blue-l)}
+.pfrh b{font-size:20px;font-weight:700;letter-spacing:-.02em}
+.pfrh em{font-style:normal;font-size:14px;color:var(--sub);font-weight:600}
+.pfa{margin-left:auto;display:flex;gap:8px}
+.pfa button{width:40px;height:40px;border-radius:50%;background:var(--card);outline:1px solid var(--line);outline-offset:-1px;font-size:22px;line-height:1}
+@media (hover:hover){.pfa button:hover{background:var(--blue);color:#fff}}
+@media (hover:none){.pfa{display:none}}
+.pfs{display:flex;gap:16px;overflow-x:auto;padding:2px 2px 14px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#c9ced9 transparent;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+@media (hover:hover){.pfs{cursor:grab}}
+.pfs.drag{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.pfs::-webkit-scrollbar{height:6px}.pfs::-webkit-scrollbar-thumb{background:#c9ced9;border-radius:6px}
+.pfi{position:relative;flex:none;height:var(--pfh);padding:0;display:block;border-radius:12px;overflow:hidden;background:var(--ph);scroll-snap-align:start;box-shadow:0 2px 10px rgba(13,15,20,.07)}
+.pfi img,.pfi video{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;-webkit-user-drag:none;user-select:none}
+.pfp{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;background:rgba(13,15,20,.6);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center}
+.pfe{padding:60px 0;text-align:center;color:#8b92a3;font-weight:700}
+@media (max-width:640px){.pf{--pfh:340px;gap:36px}.pfrh b{font-size:18px}.pfs{gap:10px}.pfi{border-radius:10px}}
 </style>
 </head>
 <body>
@@ -570,7 +570,7 @@ section,.hd,.sl,.port,.price,.bk,.inc,.foot{min-width:0;max-width:100%}
 </div></section>
 
 <section id="port"><div class="hd" data-n="1"><h2><sup>02</sup><bdi data-en="Portfolio">포트폴리오</bdi></h2><span>PORTFOLIO</span></div>
-<div class="pf"><div class="pft" id="pft"></div><div class="pfg" id="pfg"></div><button class="pfm" id="pfm" hidden></button></div></section>
+<div class="pf" id="pfg"></div></section>
 
 <section><div class="hd" data-n="2"><h2><sup>03</sup><bdi data-en="Workflow">작업과정</bdi></h2><span>WORKFLOW</span></div>
 <div class="tabs" id="tabs"><button class="on" data-en="Illustration">일러스트</button><button data-en="Illustration + Rigging">일러스트 + 리깅</button></div>
@@ -726,21 +726,28 @@ function pfMedia(item,lightbox=false){
     ? `<video src="${item.s}" autoplay muted loop playsinline preload="auto"></video>`
     : `<img src="${item.s}" alt="${t(item.title)}">`;
 }
-const PAGE=12;let pfCat='all',pfN=PAGE,PV=[];
+let PV=[],pfMoved=false,pfDrag=null;
 function pfR(){
-  const tb=$('#pft'),g=$('#pfg'),m=$('#pfm');
-  if(!PF.length){tb.innerHTML='';m.hidden=true;g.innerHTML=pfDone?`<div class="pfe">${t('등록된 포트폴리오가 없습니다.')}</div>`:'';return}
-  const cats=PF_GROUPS.map(x=>[x.prefix,x.title,PF.filter(i=>i.prefix===x.prefix).length]).filter(x=>x[2]);
-  if(!cats.some(c=>c[0]===pfCat))pfCat=cats[0][0];
-  tb.innerHTML=cats.map(([k,n,c])=>`<button class="${k===pfCat?'on':''}" data-k="${k}">${t(n)}<em>${c}</em></button>`).join('');
-  PV=PF.filter(x=>x.prefix===pfCat);
-  g.innerHTML=PV.slice(0,pfN).map((x,i)=>`<button class="pfi" data-i="${i}" aria-label="${t(x.title)} ${x.num}">${x.kind==='video'?`<video src="${x.s}#t=0.1" muted loop playsinline preload="metadata"></video><span class="pfp">▶</span>`:`<img src="${x.s}" alt="" loading="lazy" decoding="async">`}<span class="pfl">${x.label} ${String(x.num).padStart(2,'0')}</span></button>`).join('');
-  const left=PV.length-pfN;m.hidden=left<=0;m.textContent=t('더보기')+' ('+Math.max(left,0)+')';
+  const g=$('#pfg'),sv={};
+  g.querySelectorAll('.pfs').forEach(e=>sv[e.dataset.c]=e.scrollLeft);
+  if(!PF.length){g.innerHTML=pfDone?`<div class="pfe">${t('등록된 포트폴리오가 없습니다.')}</div>`:'';return}
+  g.innerHTML=PF_GROUPS.map(x=>{
+    const L=PF.filter(i=>i.prefix===x.prefix);if(!L.length)return'';
+    return `<div class="pfr"><div class="pfrh"><small>${x.label}</small><b>${t(x.title)}</b><em>${L.length}</em><div class="pfa"><button data-d="-1" aria-label="${t('이전')}">‹</button><button data-d="1" aria-label="${t('다음')}">›</button></div></div><div class="pfs" data-c="${x.prefix}">${L.map((it,i)=>`<button class="pfi" data-c="${x.prefix}" data-i="${i}" style="aspect-ratio:${it.w||3}/${it.h||4}" aria-label="${t(x.title)} ${it.num}">${it.kind==='video'?`<video src="${it.s}#t=0.1" muted loop playsinline preload="metadata"></video><span class="pfp">▶</span>`:`<img src="${it.s}" alt="" loading="lazy" decoding="async" draggable="false">`}</button>`).join('')}</div></div>`}).join('');
+  g.querySelectorAll('.pfs').forEach(e=>{if(sv[e.dataset.c])e.scrollLeft=sv[e.dataset.c]});
 }
 function pfGo(n){if(!PV.length)return;pi=(n+PV.length)%PV.length}
-$('#pft').onclick=e=>{const b=e.target.closest('button');if(!b)return;pfCat=b.dataset.k;pfN=PAGE;pfR()};
-$('#pfm').onclick=()=>{pfN+=PAGE;pfR()};
-$('#pfg').onclick=e=>{const b=e.target.closest('.pfi');if(b)lb('pf',+b.dataset.i)};
+$('#pfg').onclick=e=>{
+  const a=e.target.closest('.pfa button');
+  if(a){const r=a.closest('.pfr').querySelector('.pfs');r.scrollBy({left:+a.dataset.d*r.clientWidth*.8,behavior:'smooth'});return}
+  const b=e.target.closest('.pfi');
+  if(!b)return;
+  if(pfMoved){pfMoved=false;return}
+  PV=PF.filter(x=>x.prefix===b.dataset.c);lb('pf',+b.dataset.i)
+};
+$('#pfg').addEventListener('pointerdown',e=>{const r=e.target.closest('.pfs');if(!r||e.pointerType!=='mouse'||e.button)return;pfDrag={r,x:e.clientX,l:r.scrollLeft};pfMoved=false});
+addEventListener('pointermove',e=>{if(!pfDrag)return;const dx=e.clientX-pfDrag.x;if(!pfMoved&&Math.abs(dx)>5){pfMoved=true;pfDrag.r.classList.add('drag')}if(pfMoved)pfDrag.r.scrollLeft=pfDrag.l-dx});
+addEventListener('pointerup',()=>{if(pfDrag){pfDrag.r.classList.remove('drag');pfDrag=null;setTimeout(()=>{pfMoved=false},50)}});
 $('#pfg').addEventListener('mouseover',e=>{const b=e.target.closest('.pfi'),v=b&&b.querySelector('video');if(v)v.play().catch(()=>{})});
 $('#pfg').addEventListener('mouseout',e=>{const b=e.target.closest('.pfi'),v=b&&b.querySelector('video');if(v&&!b.contains(e.relatedTarget))v.pause()});
 async function pfProbe(group,num){
@@ -752,7 +759,7 @@ async function pfProbe(group,num){
       if(settled)return;
       settled=true;
       media.onload=null;media.onerror=null;media.onloadedmetadata=null;media.onloadeddata=null;
-      resolve(ok?item:null);
+      if(ok){item.w=media.naturalWidth||media.videoWidth;item.h=media.naturalHeight||media.videoHeight}resolve(ok?item:null);
     };
     media.onerror=()=>done(false);
     if(group.kind==='video'){
