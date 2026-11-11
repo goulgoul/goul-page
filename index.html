@@ -246,62 +246,62 @@ section{margin-top:64px}
 <body>
 <div id="page">
 <header class="hero">
-<div class="lang" role="group" aria-label="Language"><button type="button" data-l="ko" class="on">한국어</button><button type="button" data-l="en">EN</button></div>
-<div class="hi"><p data-en="Hello,">안녕하세요,</p><p data-en='I&#39;m <mark>Goul</mark>, an artist working from <b>illustration</b> to <b>rigging</b>'><b>일러스트</b>부터 <b>리깅</b>까지 작업하는 작가 <br class="mbr"><mark>구울입니다</mark></p><small>ILLUSTRATOR X RIGGER</small></div>
-<div class="btns"><button class="b1" onclick="goH(4)" data-en="Apply">신청하기</button><button class="b2" onclick="goH(1)" data-en="Portfolio">포트폴리오</button></div>
+<div class="lang" role="group" aria-label="Language"><button type="button" data-l="ko" class="on">한국어</button><button type="button" data-l="en">EN</button><button type="button" data-l="ja">日本語</button></div>
+<div class="hi"><p data-en="Hello," data-ja="こんにちは、">안녕하세요,</p><p data-en='I&#39;m <mark>Goul</mark>, an artist working from <b>illustration</b> to <b>rigging</b>' data-ja="<b>イラスト</b>から<b>リギング</b>まで手がける作家<br class='mbr'><mark>Goulです</mark>"><b>일러스트</b>부터 <b>리깅</b>까지 작업하는 작가 <br class="mbr"><mark>구울입니다</mark></p><small>ILLUSTRATOR X RIGGER</small></div>
+<div class="btns"><button class="b1" onclick="goH(4)" data-en="Apply" data-ja="申し込む">신청하기</button><button class="b2" onclick="goH(1)" data-en="Portfolio" data-ja="ポートフォリオ">포트폴리오</button></div>
 <div class="cw" aria-hidden="true"><img class="char" alt="" width="645" height="640" decoding="async" src="assets/hero.webp"></div>
 </header>
 
-<section><div class="hd" data-n="0"><h2><sup>01</sup><bdi data-en="Booking Slots">예약 슬롯 현황</bdi></h2><span>SLOTS</span></div>
+<section><div class="hd" data-n="0"><h2><sup>01</sup><bdi data-en="Booking Slots" data-ja="予約スロット状況">예약 슬롯 현황</bdi></h2><span>SLOTS</span></div>
 <div class="sl">
-<div class="sl-l"><small>OPEN EVENT · 50% OFF</small><h3 data-en="Availability">현황 안내</h3>
-<div class="sl-lg"><span><i class="sd"></i><bdi data-en="Available">예약가능</bdi></span><span><i class="sd f"></i><bdi data-en="Booked">예약마감</bdi></span></div>
-<p data-en="Check current availability here.<br>Please look at open dates before inquiring.">현재의 예약 현황을 확인하실 수 있습니다.<br>문의하시기 전에 가능한 일정부터 살펴봐 주세요.</p></div>
-<div class="sl-r"><ul id="slotul"></ul><p class="sl-n" data-en="* Availability may change at any time.">* 예약 현황은 수시로 바뀔 수 있습니다.</p></div>
+<div class="sl-l"><small>OPEN EVENT · 50% OFF</small><h3 data-en="Availability" data-ja="空き状況のご案内">현황 안내</h3>
+<div class="sl-lg"><span><i class="sd"></i><bdi data-en="Available" data-ja="予約可能">예약가능</bdi></span><span><i class="sd f"></i><bdi data-en="Booked" data-ja="受付終了">예약마감</bdi></span></div>
+<p data-en="Check current availability here.<br>Please look at open dates before inquiring." data-ja="現在の予約状況をご確認いただけます。<br>お問い合わせの前に、空いている日程をご確認ください。">현재의 예약 현황을 확인하실 수 있습니다.<br>문의하시기 전에 가능한 일정부터 살펴봐 주세요.</p></div>
+<div class="sl-r"><ul id="slotul"></ul><p class="sl-n" data-en="* Availability may change at any time." data-ja="※ 予約状況は随時変更される場合があります。">* 예약 현황은 수시로 바뀔 수 있습니다.</p></div>
 </div></section>
 
-<section id="port"><div class="hd" data-n="1"><h2><sup>02</sup><bdi data-en="Portfolio">포트폴리오</bdi></h2><span>PORTFOLIO</span></div>
+<section id="port"><div class="hd" data-n="1"><h2><sup>02</sup><bdi data-en="Portfolio" data-ja="ポートフォリオ">포트폴리오</bdi></h2><span>PORTFOLIO</span></div>
 <div class="pf" id="pfg"></div></section>
 
-<section><div class="hd" data-n="2"><h2><sup>03</sup><bdi data-en="Workflow">작업과정</bdi></h2><span>WORKFLOW</span></div>
-<div class="tabs" id="tabs"><button class="on" data-en="Illustration">일러스트</button><button data-en="Illustration + Rigging">일러스트 + 리깅</button></div>
+<section><div class="hd" data-n="2"><h2><sup>03</sup><bdi data-en="Workflow" data-ja="作業の流れ">작업과정</bdi></h2><span>WORKFLOW</span></div>
+<div class="tabs" id="tabs"><button class="on" data-en="Illustration" data-ja="イラスト">일러스트</button><button data-en="Illustration + Rigging" data-ja="イラスト + リギング">일러스트 + 리깅</button></div>
 <div class="steps" id="steps"></div>
 <ul class="notes">
-<li data-en="Work is completed within 40 days at most.">작업은 최대 40일 안에 마무리됩니다.</li>
-<li data-en="If review replies are delayed, the whole schedule may be pushed back by the same amount.">컨펌 답변이 늦어지면 전체 일정도 그만큼 뒤로 밀릴 수 있습니다.</li>
-<li data-en="Standard reviews: 2 for illustration, 4 for illustration + rigging. Additional reviews or requests not in the application form may incur extra fees.">기본 컨펌은 일러스트 2회, 일러스트 + 리깅 4회입니다. 그 외에 컨펌을 더 진행하거나 신청서에 없던 내용을 요청하시면 추가 비용이 생길 수 있습니다.</li>
-<li data-en="Errors caused by the artist, or omitted/misapplied revisions, can be corrected even after you receive the final files.">작업자의 실수로 인한 오류나 수정 사항의 누락·오반영은 최종본을 받으신 뒤에도 수정을 요청하실 수 있습니다.</li>
+<li data-en="Work is completed within 40 days at most." data-ja="作業は最長40日以内に完了します。">작업은 최대 40일 안에 마무리됩니다.</li>
+<li data-en="If review replies are delayed, the whole schedule may be pushed back by the same amount." data-ja="確認のご返信が遅れた場合、全体のスケジュールもその分遅れることがあります。">컨펌 답변이 늦어지면 전체 일정도 그만큼 뒤로 밀릴 수 있습니다.</li>
+<li data-en="Standard reviews: 2 for illustration, 4 for illustration + rigging. Additional reviews or requests not in the application form may incur extra fees." data-ja="基本の確認回数は、イラスト2回、イラスト + リギング4回です。それ以上の確認や、申込フォームにない内容のご依頼には、追加費用が発生する場合があります。">기본 컨펌은 일러스트 2회, 일러스트 + 리깅 4회입니다. 그 외에 컨펌을 더 진행하거나 신청서에 없던 내용을 요청하시면 추가 비용이 생길 수 있습니다.</li>
+<li data-en="Errors caused by the artist, or omitted/misapplied revisions, can be corrected even after you receive the final files." data-ja="作業者のミスによる不具合や、修正事項の漏れ・誤反映は、最終データのお渡し後でも修正をご依頼いただけます。">작업자의 실수로 인한 오류나 수정 사항의 누락·오반영은 최종본을 받으신 뒤에도 수정을 요청하실 수 있습니다.</li>
 </ul></section>
 
-<section><div class="hd" data-n="3"><h2><sup>04</sup><bdi data-en="Included Rigging">리깅 포함 목록</bdi></h2><span>RIGGING</span></div><div class="bk one"><div class="port"><div class="pl" id="rl"></div><div class="img" id="rimg"></div></div><div class="bc" style="margin-top:12px"><h4 data-en="Rigging List">리깅 목록</h4><div class="inc" id="rinc"></div></div></div></section>
+<section><div class="hd" data-n="3"><h2><sup>04</sup><bdi data-en="Included Rigging" data-ja="リギング込み項目">리깅 포함 목록</bdi></h2><span>RIGGING</span></div><div class="bk one"><div class="port"><div class="pl" id="rl"></div><div class="img" id="rimg"></div></div><div class="bc" style="margin-top:12px"><h4 data-en="Rigging List" data-ja="リギング一覧">리깅 목록</h4><div class="inc" id="rinc"></div></div></div></section>
 
-<section id="price"><div class="hd" data-n="4"><h2><sup>05</sup><bdi data-en="Price Guide">가격안내</bdi></h2><span>PRICE GUIDE</span></div>
+<section id="price"><div class="hd" data-n="4"><h2><sup>05</sup><bdi data-en="Price Guide" data-ja="料金案内">가격안내</bdi></h2><span>PRICE GUIDE</span></div>
 <div class="price"><div>
-<div class="evb"><b>OPEN EVENT</b><span data-en="Launch event: <em>50% off</em> all plans. Add-on options are excluded from the discount.">오픈 기념으로 요금제 <em>50% 할인</em>을 진행 중입니다. 추가 옵션은 할인 대상에서 제외됩니다.</span></div>
-<p class="notice" style="margin:0 0 16px" data-en="Prices are for <b class='bl'>non-commercial use</b>. For commercial use (merchandise production &amp; sales, etc.), a <b class='bl'>copyright purchase</b> is available. Please <b class='bl'>inquire separately</b>.">표시된 금액은 <b class="bl">비상업용</b> 기준입니다. 상업적 이용(굿즈 제작·판매 등)을 원하시면 <b class="bl">저작권 구매</b>가 가능하며, <b class="bl">별도로 문의</b>해 주세요.</p>
+<div class="evb"><b>OPEN EVENT</b><span data-en="Launch event: <em>50% off</em> all plans. Add-on options are excluded from the discount." data-ja="オープン記念として全プラン<em>50%割引</em>を実施中です。追加オプションは割引の対象外です。">오픈 기념으로 요금제 <em>50% 할인</em>을 진행 중입니다. 추가 옵션은 할인 대상에서 제외됩니다.</span></div>
+<p class="notice" style="margin:0 0 16px" data-en="Prices are for <b class='bl'>non-commercial use</b>. For commercial use (merchandise production &amp; sales, etc.), a <b class='bl'>copyright purchase</b> is available. Please <b class='bl'>inquire separately</b>." data-ja="表示金額は<b class='bl'>非商用</b>基準です。商用利用（グッズの制作・販売など）をご希望の場合は<b class='bl'>著作権の買取</b>が可能ですので、<b class='bl'>別途お問い合わせ</b>ください。">표시된 금액은 <b class="bl">비상업용</b> 기준입니다. 상업적 이용(굿즈 제작·판매 등)을 원하시면 <b class="bl">저작권 구매</b>가 가능하며, <b class="bl">별도로 문의</b>해 주세요.</p>
 <div class="cards" id="cards"></div>
-<div class="opts"><div class="oh"><h4 data-en="Add-on Options">추가 옵션</h4><span>ADD OPTION</span></div><p class="od" id="od"></p><div id="opts"></div></div>
+<div class="opts"><div class="oh"><h4 data-en="Add-on Options" data-ja="追加オプション">추가 옵션</h4><span>ADD OPTION</span></div><p class="od" id="od"></p><div id="opts"></div></div>
 
-<div id="applyslot"><div class="hd" style="margin-top:80px"><h2><sup>06</sup><bdi data-en="Application Form">신청 양식</bdi></h2><span>APPLY</span></div><div class="bc form">
-<p class="notice" style="margin:0 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)" data-en="※ This form is for <b class='bl'>non-commercial commissions</b> only.<br>For commercial use (merchandise production &amp; sales, etc.), a <b class='bl'>copyright purchase</b> is available. Please <b class='bl'>inquire separately</b> before applying.">※ 이 신청서는 <b class="bl">비상업용 의뢰</b> 기준입니다.<br>상업적 이용(굿즈 제작·판매 등)을 원하시면 <b class="bl">저작권 구매</b>가 가능하며, 신청 전에 <b class="bl">별도로 문의</b>해 주세요.</p>
-<label data-en="1. Streamer nickname / Platform / Planned debut date">1. 방송 닉네임 / 플랫폼 / 데뷔 예정 시기</label>
-<small data-en="If this is not for streaming, write 'N/A'">방송용이 아니라서 해당 사항이 없다면 '기재 X'라고 적어 주세요</small><textarea></textarea>
-<label data-en="2. Character traits (body type / personality / mood / RP / streaming style, etc.)">2. 캐릭터 특징 (체형 / 성격 / 분위기 / RP / 방송 스타일 등)</label>
-<small data-en="※ Please state the apparent gender and age range.<br>※ Please <b class='bl'>attach reference images</b> when inquiring.">※ 겉보기 성별·나이대는 반드시 기재해 주세요.<br>※ 문의하실 때 참고 이미지를 <b class="bl">반드시 첨부</b>해 주세요.</small><textarea style="height:160px"></textarea>
-<label data-en="3. Requests · additional questions">3. 요청 · 추가 문의 사항</label>
-<small data-en="e.g. keep private, extra parts you want to add, etc.">예) 비공개 요청, 추가하고 싶은 파츠 등</small><textarea></textarea>
-<p class="notice" style="margin:14px 0 0;text-align:center" data-en="<b class='bl'>50% launch discount in progress!</b> (excl. add-ons)<br>Feel free to contact me :D I'll reply as soon as I check!"><b class="bl">오픈 기념 50% 할인 진행 중!</b> (추가 옵션 제외)<br>편하게 문의해 주세요 :D 확인하는 대로 최대한 빨리 답변드릴게요!</p></div></div>
+<div id="applyslot"><div class="hd" style="margin-top:80px"><h2><sup>06</sup><bdi data-en="Application Form" data-ja="申込フォーム">신청 양식</bdi></h2><span>APPLY</span></div><div class="bc form">
+<p class="notice" style="margin:0 0 18px;padding-bottom:16px;border-bottom:1px solid var(--line)" data-en="※ This form is for <b class='bl'>non-commercial commissions</b> only.<br>For commercial use (merchandise production &amp; sales, etc.), a <b class='bl'>copyright purchase</b> is available. Please <b class='bl'>inquire separately</b> before applying." data-ja="※ このフォームは<b class='bl'>非商用のご依頼</b>が基準です。<br>商用利用（グッズの制作・販売など）をご希望の場合は<b class='bl'>著作権の買取</b>が可能ですので、お申し込み前に<b class='bl'>別途お問い合わせ</b>ください。">※ 이 신청서는 <b class="bl">비상업용 의뢰</b> 기준입니다.<br>상업적 이용(굿즈 제작·판매 등)을 원하시면 <b class="bl">저작권 구매</b>가 가능하며, 신청 전에 <b class="bl">별도로 문의</b>해 주세요.</p>
+<label data-en="1. Streamer nickname / Platform / Planned debut date" data-ja="1. 配信用ニックネーム / プラットフォーム / デビュー予定時期">1. 방송 닉네임 / 플랫폼 / 데뷔 예정 시기</label>
+<small data-en="If this is not for streaming, write 'N/A'" data-ja="配信用でなく該当しない場合は「記載なし」とご記入ください">방송용이 아니라서 해당 사항이 없다면 '기재 X'라고 적어 주세요</small><textarea></textarea>
+<label data-en="2. Character traits (body type / personality / mood / RP / streaming style, etc.)" data-ja="2. キャラクターの特徴（体型 / 性格 / 雰囲気 / RP / 配信スタイルなど）">2. 캐릭터 특징 (체형 / 성격 / 분위기 / RP / 방송 스타일 등)</label>
+<small data-en="※ Please state the apparent gender and age range.<br>※ Please <b class='bl'>attach reference images</b> when inquiring." data-ja="※ 見た目の性別・年齢層は必ずご記入ください。<br>※ お問い合わせの際は、参考画像を<b class='bl'>必ず添付</b>してください。">※ 겉보기 성별·나이대는 반드시 기재해 주세요.<br>※ 문의하실 때 참고 이미지를 <b class="bl">반드시 첨부</b>해 주세요.</small><textarea style="height:160px"></textarea>
+<label data-en="3. Requests · additional questions" data-ja="3. ご要望・追加のお問い合わせ">3. 요청 · 추가 문의 사항</label>
+<small data-en="e.g. keep private, extra parts you want to add, etc." data-ja="例）非公開のご希望、追加したいパーツなど">예) 비공개 요청, 추가하고 싶은 파츠 등</small><textarea></textarea>
+<p class="notice" style="margin:14px 0 0;text-align:center" data-en="<b class='bl'>50% launch discount in progress!</b> (excl. add-ons)<br>Feel free to contact me :D I'll reply as soon as I check!" data-ja="<b class='bl'>オープン記念50%割引実施中！</b>（追加オプションを除く）<br>お気軽にお問い合わせください :D 確認次第、できるだけ早くご返信します！"><b class="bl">오픈 기념 50% 할인 진행 중!</b> (추가 옵션 제외)<br>편하게 문의해 주세요 :D 확인하는 대로 최대한 빨리 답변드릴게요!</p></div></div>
 </div>
 
-<aside class="quote"><small>LIVE QUOTE</small><h3 data-en="Estimate">예상 견적</h3>
-<div class="row"><span data-en="Type">작업 유형</span><b id="qt"></b></div>
-<div class="row"><span data-en="Base price">기본 금액</span><b id="qb"></b></div>
-<div class="row"><span data-en="Launch discount (50%)">오픈 기념 할인 (50%)</span><b class="dc" id="qd"></b></div>
-<div class="row"><span data-en="Add-ons">추가 옵션</span><b id="qo"></b></div>
+<aside class="quote"><small>LIVE QUOTE</small><h3 data-en="Estimate" data-ja="お見積り">예상 견적</h3>
+<div class="row"><span data-en="Type" data-ja="作業タイプ">작업 유형</span><b id="qt"></b></div>
+<div class="row"><span data-en="Base price" data-ja="基本金額">기본 금액</span><b id="qb"></b></div>
+<div class="row"><span data-en="Launch discount (50%)" data-ja="オープン記念割引（50%）">오픈 기념 할인 (50%)</span><b class="dc" id="qd"></b></div>
+<div class="row"><span data-en="Add-ons" data-ja="追加オプション">추가 옵션</span><b id="qo"></b></div>
 <div class="ol" id="qol"></div>
-<div class="row f"><span data-en="Stream info">방송 정보</span><b class="v" id="qf0"></b></div>
-<div class="row f"><span data-en="Character traits">캐릭터 특징</span><b class="v" id="qf1"></b></div>
-<div class="row f"><span data-en="Requests">요청 사항</span><b class="v" id="qf2"></b></div>
+<div class="row f"><span data-en="Stream info" data-ja="配信情報">방송 정보</span><b class="v" id="qf0"></b></div>
+<div class="row f"><span data-en="Character traits" data-ja="キャラクターの特徴">캐릭터 특징</span><b class="v" id="qf1"></b></div>
+<div class="row f"><span data-en="Requests" data-ja="ご要望">요청 사항</span><b class="v" id="qf2"></b></div>
 <div class="tot"><small>TOTAL</small><strong id="qs"></strong></div>
 <button class="copy" id="copy">양식 복사</button></aside></div></section>
 <div id="more"></div>
@@ -382,11 +382,12 @@ const EN={
 '얼굴 작업이 완료된 후에는 환불이 불가합니다.':'No refunds once face work is complete.',
 '환불 금액은 실제 결제 금액을 기준으로 하며, 리깅 금액은 일러스트 + 리깅 금액에서 같은 범위의 일러스트 단독 금액을 뺀 금액입니다.':'Refunds are based on the actual amount paid. The rigging fee is the Illustration + Rigging price minus the Illustration-only price of the same scope.'
 };
+const JA={'캐릭터 일러스트':'キャラクターイラスト','Live2D 리깅':'Live2D リギング','디자인':'デザイン','등록된 포트폴리오가 없습니다.':'登録されたポートフォリオはまだありません。','예약 가능':'予約可能','마감':'受付終了','문의 · 신청':'お問い合わせ・お申し込み','결제':'お支払い','디자인 · 스케치':'デザイン・スケッチ','1차 컨펌':'1回目の確認','채색 · 완성':'彩色・仕上げ','2차 컨펌':'2回目の確認','파츠 분리 · 추가 제작':'パーツ分け・追加制作','최종본 전달':'最終データのお渡し','파츠 분리 · 리깅':'パーツ分け・リギング','얼굴 작업':'顔のリギング','3차 컨펌':'3回目の確認','완성':'完成','4차 컨펌':'4回目の確認','신청 양식과 참고 이미지로 가능 여부와 일정을 안내드려요.':'申込フォームと参考画像をもとに、可否とスケジュールをご案内します。','견적과 일정을 확인하신 뒤 결제를 진행해요.':'お見積りとスケジュールをご確認いただいた後、お支払いに進みます。','캐릭터 디자인과 러프 스케치를 먼저 잡아요.':'キャラクターデザインとラフスケッチを先に作成します。','스케치를 확인하고 수정 사항을 알려 주세요.':'スケッチをご確認のうえ、修正点をお知らせください。','확정된 스케치로 채색과 마무리를 진행해요.':'確定したスケッチで彩色と仕上げを行います。','완성본을 확인하고 수정 사항을 알려 주세요.':'完成イラストをご確認のうえ、修正点をお知らせください。','파츠를 분리하고 기본 표정 등 추가분을 제작해요.':'パーツを分け、基本表情などの追加分を制作します。','최종 파일을 전달드리고 작업을 마무리해요.':'最終ファイルをお渡しして、作業を終了します。','Live2D용으로 파츠를 분리하고 리깅을 진행해요.':'Live2D用にパーツを分け、リギングを行います。','표정과 얼굴 움직임을 세팅해요.':'表情と顔の動きを設定します。','움직임을 확인하고 수정 사항을 알려 주세요.':'動きをご確認のうえ、修正点をお知らせください。','수정 사항을 반영해 모델을 마무리해요.':'修正を反映してモデルを仕上げます。','최종 확인 후 마지막 수정 사항을 알려 주세요.':'最終確認後、最後の修正点をお知らせください。','얼굴 XY축':'顔 XY軸','얼굴 Z축':'顔 Z軸','몸 XYZ축':'体 XYZ軸','얼굴 페이셜':'顔のフェイシャル','기본 표정 4종':'基本表情 4種','물리효과':'物理演算','최대 45도까지 움직일 수 있습니다.':'最大45度まで動かせます。','눈썹 상하 이동 · 변형 (화남 / 슬픔)<br>눈 깜빡임 · 눈 미소<br>입 모양 12점':'眉の上下移動・変形（怒り／悲しみ）<br>まばたき・笑い目<br>口形 12点','발그레 / 정색<br>하트눈 / 반짝눈':'頬染め／真顔<br>ハート目／キラキラ目','머리카락 / 눈(표정) / 의상<br>가슴 / 장식 / 호흡':'髪／目（表情）／衣装<br>胸／装飾／呼吸','얼굴/몸 XYZ축':'顔・体 XYZ軸','전신 일러스트 + 리깅':'全身イラスト + リギング','흉상 일러스트 + 리깅':'バストアップイラスト + リギング','전신 일러스트':'全身イラスト','흉상 일러스트':'バストアップイラスト','캐릭터 디자인 포함 + 기본 표정 4종 제작 + 리깅 포함 +VBridger':'キャラクターデザイン込み + 基本表情4種制作 + リギング込み + VBridger','캐릭터 디자인 포함 + 기본 표정 4종 제작':'キャラクターデザイン込み + 基本表情4種制作','<b>현재 「일러스트 + 리깅」 기준 금액</b>이 표시됩니다.<br>리깅 작업이 포함된 요금제 기준으로 추가 옵션 금액이 적용됩니다. 디자인 난이도에 따라 금액이 달라질 수 있으며, 추가 옵션은 오픈 기념 할인 대상이 아닙니다.':'<b>現在は「イラスト + リギング」基準の金額を表示しています。</b><br>リギング込みのプランを基準に、追加オプションの金額が適用されます。デザインの難易度によって金額が変わる場合があり、追加オプションはオープン記念割引の対象外です。','추가 디자인 시안 (러프 기준)':'追加デザイン案（ラフ基準）','추가 표정 (기본 표정 제외)':'追加表情（基本表情を除く）','베이스 바디 추가':'ベースボディ追加','신의상 추가':'新衣装追加','신헤어 추가':'新ヘアスタイル追加','팔/손 포즈 추가':'腕・手のポーズ追加','복잡한 장식/디자인':'複雑な装飾・デザイン','삼면도':'三面図','비대칭 포즈 및 디자인':'非対称のポーズ・デザイン','혀':'舌','ON/OFF 의상':'ON/OFF衣装','장식 및 소품':'装飾・小物','눈동자 움직임 추가':'瞳の動き追加','데뷔 이후 비공개':'デビュー後も非公開','데뷔 후 6개월 기준':'デビュー後6か月基準','빠른 마감 (별도 협의)':'特急対応（要相談）','별도 협의':'要相談','양식 복사':'フォームをコピー','복사됨':'コピーしました','복사 실패 · 직접 선택해 주세요':'コピーに失敗しました・手動で選択してください','닫기':'閉じる','더보기':'もっと見る','전체':'すべて','이전':'前へ','다음':'次へ','수량 감소':'数量を減らす','수량 증가':'数量を増やす','사용 범위':'使用範囲','저작권 · 작업물 공개':'著作権・作品の公開','환불 안내':'返金について','방송용 의뢰 기본 포함 사항':'配信用ご依頼に基本で含まれる内容','치지직·SOOP 등 방송 플랫폼 내 방송 송출 가능':'CHZZK・SOOPなどの配信プラットフォームでの配信が可能','방송용 일러스트(프로필 이미지 등)와 팬아트 제작 가능':'配信用イラスト（プロフィール画像など）やファンアートの制作が可能','방송에 쓰는 표·시트 제작을 위한 2차 가공 가능':'配信で使う表・シートの制作のための二次加工が可能','원본의 특징을 크게 바꾸는 과도한 수정은 불가':'原作の特徴を大きく変えるような過度な改変は不可','AI 학습 및 AI 기반 저작물 생성 용도 사용 불가':'AI学習およびAIによる著作物生成への使用は不可','표에 없는 사용 범위는 별도로 문의해 주세요.':'表にない使用範囲は、別途お問い合わせください。','저작권 구매 가격과 세부 조건은 별도 문의가 필요합니다.':'著作権買取の価格と詳細条件は、別途お問い合わせが必要です。','이 의뢰는 비상업용 기준이며, 아래 범위 안에서 사용하실 수 있습니다.':'このご依頼は非商用が基準で、以下の範囲内でご使用いただけます。','상업적 이용(굿즈 제작·판매 등)은 이 요금제에 포함되지 않으며, 저작권을 구매하시면 가능합니다. 가격과 세부 조건은 별도로 문의해 주세요.':'商用利用（グッズの制作・販売など）はこのプランに含まれませんが、著作権を買い取っていただければ可能です。価格と詳細条件は別途お問い合わせください。','이용 범위 비교표':'利用範囲の比較表','항목':'項目','비상업용 의뢰':'非商用のご依頼','저작권 구매 시':'著作権買取の場合','별도 문의':'要相談','방송 플랫폼 내 사용':'配信プラットフォーム内での使用','유튜브 송출/업로드':'YouTubeでの配信・アップロード','굿즈 제작 및 판매':'グッズの制作・販売','타 작가 의뢰 · 3D 제작':'他の作家への依頼・3D制作','모델 양도 · 재판매':'モデルの譲渡・転売','저작권':'著作権','모든 작업물의 저작권은 작가(구울)에게 있습니다.':'すべての作品の著作権は作家（Goul）に帰属します。','모델을 양도·재판매하거나 AI 학습에 사용하는 것은 불가합니다.':'モデルの譲渡・転売やAI学習への使用はできません。','이 밖의 저작권 관련 내용은 별도로 문의해 주세요.':'これ以外の著作権に関する内容は、別途お問い合わせください。','포트폴리오 공개':'ポートフォリオ公開','완성작뿐 아니라 작업 중인 결과물 역시 SNS·유튜브 등에 포트폴리오로 공개될 수 있습니다.':'完成作品だけでなく、制作途中の成果物もSNS・YouTubeなどでポートフォリオとして公開される場合があります。','데뷔 전 비공개 요청은 별도 비용 없이 가능합니다. 원하시면 미리 꼭 알려 주세요.':'デビュー前の非公開のご希望は、追加費用なしで承ります。ご希望の場合は事前に必ずお知らせください。','데뷔 이후에도 비공개를 원하시는 경우 추가금 100,000원(데뷔 후 6개월 기준)이 발생하며, 추가 옵션에서 선택하실 수 있습니다.':'デビュー後も非公開をご希望の場合は、追加料金100,000ウォン（デビュー後6か月基準）が発生し、追加オプションから選択できます。','비공개 요청은 작업 시작 전에 전달해 주셔야 하고, 착수 이후에는 반영이 어려울 수 있습니다.':'非公開のご希望は作業開始前にお伝えいただく必要があり、着手後は反映が難しい場合があります。','일러스트':'イラスト','일러스트 + 리깅':'イラスト + リギング','입금(예약) 후 ~ 스케치 착수 전: 90% 환불':'入金（予約）後～スケッチ着手前：90%返金','스케치 착수 ~ 채색 착수 전: 75% 환불':'スケッチ着手～彩色着手前：75%返金','채색 작업이 시작된 후에는 환불이 불가합니다.':'彩色作業が始まった後は返金できません。','채색 착수 ~ 리깅 착수 전: 일러스트 금액은 환불 불가, 리깅 금액은 90% 환불':'彩色着手～リギング着手前：イラスト代金は返金不可、リギング代金は90%返金','리깅 착수 ~ 얼굴 작업 완료 전(눈 깜빡임, 입 모양 등): 리깅 금액의 50% 환불':'リギング着手～顔の作業完了前（まばたき、口形など）：リギング代金の50%返金','얼굴 작업이 완료된 후에는 환불이 불가합니다.':'顔の作業が完了した後は返金できません。','환불 금액은 실제 결제 금액을 기준으로 하며, 리깅 금액은 일러스트 + 리깅 금액에서 같은 범위의 일러스트 단독 금액을 뺀 금액입니다.':'返金額は実際のお支払い金額を基準とし、リギング代金は「イラスト + リギング」の金額から同じ範囲のイラスト単体の金額を引いた金額です。'};
 let LANG='ko';
-(function(){const dflt=(navigator.language||'ko').toLowerCase().startsWith('ko')?'ko':'en';
-try{const q=new URLSearchParams(location.search).get('lang'),sv=localStorage.getItem('goul-lang');LANG=(q==='en'||q==='ko')?q:(sv==='en'||sv==='ko')?sv:dflt}catch(e){LANG=dflt}})();
-const tt=(s,L)=>L==='en'&&EN[s]!=null?EN[s]:s,t=s=>tt(s,LANG);
-function applyStatic(){document.querySelectorAll('[data-en]').forEach(e=>{if(e._ko==null)e._ko=e.innerHTML;e.innerHTML=LANG==='en'?e.dataset.en:e._ko})}
+(function(){const nl=(navigator.language||'ko').toLowerCase(),dflt=nl.startsWith('ko')?'ko':nl.startsWith('ja')?'ja':'en',OK=v=>v==='ko'||v==='en'||v==='ja';
+try{const q=new URLSearchParams(location.search).get('lang'),sv=localStorage.getItem('goul-lang');LANG=OK(q)?q:OK(sv)?sv:dflt}catch(e){LANG=dflt}})();
+const tt=(s,L)=>L==='en'&&EN[s]!=null?EN[s]:L==='ja'&&JA[s]!=null?JA[s]:s,t=s=>tt(s,LANG);
+function applyStatic(){document.querySelectorAll('[data-en]').forEach(e=>{if(e._ko==null)e._ko=e.innerHTML;e.innerHTML=LANG==='en'?e.dataset.en:LANG==='ja'?e.dataset.ja:e._ko})}
 
 function fit(){const p=$('#page');if(p)p.style.zoom='1'}
 addEventListener('resize',fit);
@@ -482,7 +483,7 @@ $('#lb').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-lx
 addEventListener('keydown',e=>{if($('#lb').hidden)return;if(e.key=='Escape')lbx();else if(e.key=='ArrowLeft')lbGo(-1);else if(e.key=='ArrowRight')lbGo(1)});
 
 /* ===================== 가격 · 견적 ===================== */
-const DC=.5,fmtL=(n,L)=>L==='en'?'₩'+n.toLocaleString('en-US'):n.toLocaleString('en-US')+'원',fmt=n=>fmtL(n,LANG);
+const DC=.5,fmtL=(n,L)=>L!=='ko'?'₩'+n.toLocaleString('en-US'):n.toLocaleString('en-US')+'원',fmt=n=>fmtL(n,LANG);
 const plans=[{n:'전신 일러스트 + 리깅',p:1600000,t:'일러스트 + 리깅',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작 + 리깅 포함 +VBridger'},{n:'흉상 일러스트 + 리깅',p:1400000,t:'일러스트 + 리깅',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작 + 리깅 포함 +VBridger'},{n:'전신 일러스트',p:900000,t:'전신 일러스트',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작'},{n:'흉상 일러스트',p:800000,t:'흉상 일러스트',s:'캐릭터 디자인 포함 + 기본 표정 4종 제작'}];
 const illustOpts=[
 {n:'추가 디자인 시안 (러프 기준)',d:'',p:60000,max:3},
@@ -593,14 +594,14 @@ function copyText(s){return new Promise(res=>{const fb=()=>{try{const b=$('#copy
    [월(숫자), [슬롯들]]  한 달이 전부 1이면 '마감', 하나라도 0이면 '예약 가능' */
 const SLOTS=[[11,[0,0]],[12,[0,0]],[1,[0]],[2,[0]]];
 const MON=['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-function slotsR(){$('#slotul').innerHTML=SLOTS.map(([m,s])=>{const ok=s.includes(0);return `<li${ok?' class="ok"':''}><b>${LANG==='en'?MON[m]:m+'월'}</b><span class="sds">${s.map(v=>`<i class="sd${v?' f':''}"></i>`).join('')}</span><em>${t(ok?'예약 가능':'마감')}</em></li>`}).join('')}
+function slotsR(){$('#slotul').innerHTML=SLOTS.map(([m,s])=>{const ok=s.includes(0);return `<li${ok?' class="ok"':''}><b>${LANG==='en'?MON[m]:LANG==='ja'?m+'月':m+'월'}</b><span class="sds">${s.map(v=>`<i class="sd${v?' f':''}"></i>`).join('')}</span><em>${t(ok?'예약 가능':'마감')}</em></li>`}).join('')}
 
 /* ===================== 언어 전환 ===================== */
 function setLang(l,save){
   LANG=l;
   if(save!==false){try{localStorage.setItem('goul-lang',l)}catch(e){}}
   document.documentElement.lang=l;
-  document.title=l==='en'?'GOUL – Illustration X Rigging':'GOUL – 일러스트 X 리깅';
+  document.title=l==='en'?'GOUL – Illustration X Rigging':l==='ja'?'GOUL – イラスト X リギング':'GOUL – 일러스트 X 리깅';
   document.querySelectorAll('.lang button').forEach(b=>{const on=b.dataset.l===l;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
   applyStatic();steps(tabIdx);slotsR();pfR();rigR();rincR();render();moreR();
   $('#copy').textContent=t('양식 복사');
@@ -626,7 +627,7 @@ if(q){if(getComputedStyle(q).position==='static'){q.style.transform=''}else{cons
 lbe.style.position='absolute';lbe.style.left='0';lbe.style.right='0';lbe.style.bottom='auto';lbe.style.top=VP.top+'px';lbe.style.height=VP.h+'px'}
 const zf=()=>parseFloat($('#page').style.zoom)||1;
 let vpT=0;const vpQ=()=>{if(vpT)return;vpT=requestAnimationFrame(()=>{vpT=0;layVP();spy()})};
-if(IN){addEventListener('message',e=>{if(e.source!==parent||!e.data)return;if(e.data.t==='goul-go'){goH(e.data.l);return}if(e.data.t==='goul-top'){toY(0);return}if(e.data.t==='goul-lang'&&(e.data.l==='ko'||e.data.l==='en')){setLang(e.data.l);return}if(e.data.t!=='goul-vp')return;VP={top:+e.data.top||0,h:+e.data.h||innerHeight,side:!!e.data.side};vpQ()});
+if(IN){addEventListener('message',e=>{if(e.source!==parent||!e.data)return;if(e.data.t==='goul-go'){goH(e.data.l);return}if(e.data.t==='goul-top'){toY(0);return}if(e.data.t==='goul-lang'&&(e.data.l==='ko'||e.data.l==='en'||e.data.l==='ja')){setLang(e.data.l);return}if(e.data.t!=='goul-vp')return;VP={top:+e.data.top||0,h:+e.data.h||innerHeight,side:!!e.data.side};vpQ()});
 new ResizeObserver(()=>{postH();layVP()}).observe(document.body);
 addEventListener('resize',()=>setTimeout(()=>{postH();layVP()},60));addEventListener('load',()=>{postH()});setInterval(()=>{postH();postNav(lastC,true)},1000);postH()}
 
