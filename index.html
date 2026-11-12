@@ -636,17 +636,9 @@ setLang(LANG,false);
 fit();
 pfLoad();
 </script>
-<style>html,body{overscroll-behavior:contain}</style>
 <script>
-/* iframe 안에서 클릭 없이 바로 스크롤되도록 포커스 자동 확보 */
-(function(){
-  function gf(){try{window.focus()}catch(e){}}
-  ['mouseover','pointerenter','pointerdown','touchstart','wheel'].forEach(function(ev){
-    document.addEventListener(ev,gf,{passive:true,capture:true});
-  });
-  window.addEventListener('load',gf);
-  gf();
-})();
+/* 마우스를 올리면 iframe 창에 포커스만 부여 (다른 동작은 건드리지 않음) */
+document.addEventListener('mouseenter',function(){try{window.focus()}catch(e){}});
 </script>
 </body>
 </html>
