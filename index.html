@@ -636,5 +636,17 @@ setLang(LANG,false);
 fit();
 pfLoad();
 </script>
+<style>html,body{overscroll-behavior:contain}</style>
+<script>
+/* iframe 안에서 클릭 없이 바로 스크롤되도록 포커스 자동 확보 */
+(function(){
+  function gf(){try{window.focus()}catch(e){}}
+  ['mouseover','pointerenter','pointerdown','touchstart','wheel'].forEach(function(ev){
+    document.addEventListener(ev,gf,{passive:true,capture:true});
+  });
+  window.addEventListener('load',gf);
+  gf();
+})();
+</script>
 </body>
 </html>
